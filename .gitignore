@@ -1,3 +1,13 @@
+# Data
+data/bruto/
+data/input/
+data/output/gpkg/
+!data/output/zips/
+
+# IDEs
+.vscode/
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
