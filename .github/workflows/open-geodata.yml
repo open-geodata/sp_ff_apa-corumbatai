@@ -22,6 +22,6 @@ jobs:
           destination-github-username: 'open-geodata'
           destination-repository-name: 'open-geodata'
           target-branch: main
-          target-directory: /src/open_geodata/data/geo/sp_piracicaba
+          target-directory: /src/open_geodata/data/geo/sp_ff_apa-corumbatai
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF   
 
