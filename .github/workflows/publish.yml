@@ -22,7 +22,7 @@ jobs:
           destination-github-username: 'open-geodata'
           destination-repository-name: 'open-geodata.github.io'
           target-branch: master
-          target-directory: /_posts/sp_piracicaba
+          target-directory: /_posts/sp_ff_apa-corumbatai
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF   
 
   build_2_imgs:
@@ -45,7 +45,7 @@ jobs:
           destination-github-username: 'open-geodata'
           destination-repository-name: 'open-geodata.github.io'
           target-branch: master
-          target-directory: /assets/sp_piracicaba/imgs
+          target-directory: /assets/sp_ff_apa-corumbatai/imgs
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
 
   build_3_data:
@@ -68,5 +68,5 @@ jobs:
           destination-github-username: 'open-geodata'
           destination-repository-name: 'open-geodata.github.io'
           target-branch: master
-          target-directory: /assets/sp_piracicaba/data
+          target-directory: /assets/sp_ff_apa-corumbatai/data
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
