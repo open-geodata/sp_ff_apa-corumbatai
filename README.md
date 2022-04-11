@@ -4,8 +4,6 @@
 
 Mapas da APA Botucatu, Corumbataí, Tejupá
 
-
-
 <br>
 
 ----

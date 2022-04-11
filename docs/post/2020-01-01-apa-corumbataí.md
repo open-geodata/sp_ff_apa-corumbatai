@@ -13,21 +13,21 @@ tags:
 classes: wide
 author: Michel Metran
 comments: false 
-excerpt: Webmap da APA Corumbataí.
+excerpt: Mapa da APA Corumbataí.
 share: false
 related: false
 header:
-  overlay_image: /assets/sp_ff_apa-corumbatai/imgs/Panorâmica_Rio_Piracicaba.jpg
+  overlay_image: /assets/sp_ff_apa-corumbatai/imgs/Sandstone_cliffs_close_to_Analandia.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo by **Bruno Karklis** on [Wikipedia](https://pt.m.wikipedia.org/wiki/Ficheiro:Panor%C3%A2mica_Rio_Piracicaba.jpg)"
+  caption: "Photo by **Dalton Holland Baptista** on [Wikimedia](https://commons.wikimedia.org/wiki/File:Sandstone_cliffs_close_to_Analandia.jpg)"
   actions:
     - label: "GitHub"
       url: "https://github.com/open-geodata/sp_ff_apa-corumbatai"
 ---
 
 
-Em 1983 foi criada uma Área de Proteção Ambiental (APAs), chamada "Botucatu, Corumbataí e Tejupá", que envolve três áreas em cada uma dessas regiões. Foi criada por meio de um #.
+Em 1983 foi criada uma Área de Proteção Ambiental (APA), chamada "APA Botucatu, Corumbataí e Tejupá", que envolve três áreas em cada uma dessas regiões. Foi criada por meio do Decreto Estadual 20.960, de 08.06.1983.
 
-
+Abaixo é apresentado detalhes apenas do perímetro "Corumbataí".
 
 <iframe src="https://open-geodata.github.io/assets/sp_ff_apa-corumbatai/data/map_apa.html" width="100%" height="480"  frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
