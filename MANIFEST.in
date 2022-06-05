@@ -13,6 +13,7 @@ prune test
 prune src/data/input 
 prune src/data/output/gpgk
 prune src/data/output/maps
+prune src/data/output/lixo
 
 #recursive-include YourPackage/data/*.csv
 
