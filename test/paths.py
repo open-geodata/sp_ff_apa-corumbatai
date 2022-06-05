@@ -1,12 +1,15 @@
 import os
 
-data_path = os.path.join('..', 'src', 'data')
-
-bruto_path = os.path.join(data_path, 'bruto')
-os.makedirs(bruto_path, exist_ok=True)
+data_path = os.path.join('..', 'src', 'sp_ff_apa_corumbatai', 'data')
 
 input_path = os.path.join(data_path, 'input')
 os.makedirs(input_path, exist_ok=True)
+
+bruto_path = os.path.join(input_path, 'bruto')
+os.makedirs(bruto_path, exist_ok=True)
+
+extract_path = os.path.join(input_path, 'extract')
+os.makedirs(extract_path, exist_ok=True)
 
 output_path = os.path.join(data_path, 'output')
 os.makedirs(output_path, exist_ok=True)
