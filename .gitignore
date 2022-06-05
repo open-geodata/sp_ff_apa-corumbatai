@@ -2,6 +2,7 @@
 src/data/bruto/*
 src/data/input/*
 src/data/output/*
+src/data/output/lixo/
 !src/data/output/zips/
 
 # IDEs

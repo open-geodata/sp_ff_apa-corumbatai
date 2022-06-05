@@ -28,10 +28,8 @@ setup(
     install_requires=requirements,
 
     # Entry
-    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
-    #package_dir={'data': ''},  # Our packages live under src but src is not a package itself
-    #packages=['data'],
     packages=find_packages('src', exclude=['test']),
+    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself    
 
     # Dados
     include_package_data=True,
