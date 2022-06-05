@@ -10,10 +10,10 @@ graft src # Add all files under directories src
 
 # Remove all files under directories
 prune test
-prune src/data/input 
-prune src/data/output/gpgk
-prune src/data/output/maps
-prune src/data/output/lixo
+prune src/sp_ff_apa_corumbatai/data/input 
+prune src/sp_ff_apa_corumbatai/data/output/gpgk
+prune src/sp_ff_apa_corumbatai/data/output/maps
+prune src/sp_ff_apa_corumbatai/data/output/lixo
 
 #recursive-include YourPackage/data/*.csv
 

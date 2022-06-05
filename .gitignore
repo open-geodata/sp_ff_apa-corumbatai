@@ -1,9 +1,9 @@
 # Data
-src/data/bruto/*
-src/data/input/*
-src/data/output/*
-src/data/output/lixo/
-!src/data/output/zips/
+src/sp_ff_apa_corumbatai/data/bruto/*
+src/sp_ff_apa_corumbatai/data/input/*
+src/sp_ff_apa_corumbatai/data/output/*
+src/sp_ff_apa_corumbatai/data/output/lixo/
+!src/sp_ff_apa_corumbatai/data/output/zips/
 
 # IDEs
 .vscode/
