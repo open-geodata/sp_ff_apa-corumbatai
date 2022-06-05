@@ -28,7 +28,6 @@ header:
 
 Em 1983 foi criada uma Área de Proteção Ambiental (APA), chamada "APA Botucatu, Corumbataí e Tejupá", que envolve três áreas em cada uma dessas regiões. A área foi criada por meio do [Decreto Estadual 20.960, de 08.06.1983](https://www.al.sp.gov.br/norma/?id=57437).
 
-Abaixo é apresentado detalhes apenas do perímetro "Corumbataí". Os *shapefiles* foram obtidos no 
-[*Google Drive*](https://drive.google.com/drive/folders/1aHCngA_x70avWrBCcmPDbUegCrfM0hDy?usp=sharing) mantido pelo Conselho Consultivo da APA, onde é possível acessar diversas outras informações.
+Em abril de 2022, na transição da gestão da APA Botucatu, Corumbataí, Tejupá, acessei o [*Google Drive*](https://drive.google.com/drive/folders/1aHCngA_x70avWrBCcmPDbUegCrfM0hDy?usp=sharing) mantido pelo Conselho Consultivo da APA (onde é possível acessar diversas outras informações!), e fiz *download* da base vetorial. Abaixo é apresentado detalhes apenas do perímetro "Corumbataí".
 
 <iframe src="/assets/sp_ff_apa-corumbatai/data/map_apa.html" width="100%" height="480"  frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
