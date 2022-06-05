@@ -1,7 +1,7 @@
 # Data
-src/data/bruto/
-src/data/input/
-src/data/output/gpkg/
+src/data/bruto/*
+src/data/input/*
+src/data/output/*
 !src/data/output/zips/
 
 # IDEs

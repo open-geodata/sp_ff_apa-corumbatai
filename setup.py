@@ -32,7 +32,7 @@ setup(
 
     # Dados
     include_package_data=True,
-    package_data={'': ['data/output/zips.7z']},
+    package_data={'': ['data/output/zips/*.7z']},
 
     # Classificação
     classifiers=[
