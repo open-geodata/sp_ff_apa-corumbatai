@@ -1,8 +1,8 @@
 # Data
-data/bruto/
-data/input/
-data/output/gpkg/
-!data/output/zips/
+src/data/bruto/
+src/data/input/
+src/data/output/gpkg/
+!src/data/output/zips/
 
 # IDEs
 .vscode/
