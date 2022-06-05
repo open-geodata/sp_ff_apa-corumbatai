@@ -9,7 +9,7 @@ for line in open('requirements.txt'):
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
-VERSION = (0, 0, 3)
+VERSION = (0, 0, 4)
 __version__ = '.'.join(map(str, VERSION))
 
 setup(
@@ -28,8 +28,10 @@ setup(
     install_requires=requirements,
 
     # Entry
+    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
+
+    # Quando são diversos módulos...
     packages=find_packages('src', exclude=['test']),
-    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself    
 
     # Dados
     include_package_data=True,
@@ -43,5 +45,4 @@ setup(
         'Natural Language :: Portuguese',
         'Intended Audience :: Developers',
     ],
-
 )
