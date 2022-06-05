@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+
+
 with open('README.md', 'r') as f:
     long_description = f.read()
 
@@ -9,8 +11,14 @@ for line in open('requirements.txt'):
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
+        
+        
 VERSION = (0, 0, 7)
 __version__ = '.'.join(map(str, VERSION))
+
+
+
+
 
 setup(
     name='sp_ff_apa_corumbatai',
