@@ -17,7 +17,7 @@ setup(
     version=__version__,
     author='Michel Metran',
     author_email='michelmetran@gmail.com',
-    description='Um tanto de coisa!',
+    description='Compartilhamento de Dados Espaciais',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/open-geodata/sp_ff_apa-corumbatai',
