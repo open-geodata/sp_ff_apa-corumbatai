@@ -1,24 +1,18 @@
 from setuptools import setup, find_packages
 
 
-
 with open('README.md', 'r') as f:
     long_description = f.read()
 
 requirements = []
-for line in open('requirements.txt'):
+for line in open('requirements.txt', encoding='utf-8'):
     li = line.strip()
     if not li.startswith('#'):
         requirements.append(line.rstrip())
 
-        
-        
-VERSION = (0, 0, 8)
+
+VERSION = (0, 0, 9)
 __version__ = '.'.join(map(str, VERSION))
-
-
-
-
 
 
 setup(
@@ -37,7 +31,8 @@ setup(
     install_requires=requirements,
 
     # Entry
-    package_dir={'': 'src'},  # Our packages live under src but src is not a package itself
+    # Our packages live under src but src is not a package itself
+    package_dir={'': 'src'},
 
     # Quando são diversos módulos...
     packages=find_packages('src', exclude=['test']),
