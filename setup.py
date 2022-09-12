@@ -32,10 +32,10 @@ setup(
 
     # Entry
     # Our packages live under src but src is not a package itself
-    package_dir={'': 'src'},
+    package_dir={'': 'sp_ff_apa_corumbatai'},
 
     # Quando são diversos módulos...
-    packages=find_packages('src', exclude=['test']),
+    packages=find_packages('sp_ff_apa_corumbatai', exclude=['test']),
 
     # Dados
     include_package_data=True,

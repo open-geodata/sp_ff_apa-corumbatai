@@ -1,10 +1,10 @@
 # Data
-src/sp_ff_apa_corumbatai/data/bruto/*
-src/sp_ff_apa_corumbatai/data/input/*
-src/sp_ff_apa_corumbatai/data/output/*
-#src/sp_ff_apa_corumbatai/data/output/lixo/
-!src/sp_ff_apa_corumbatai/data/output/zips/
-!src/sp_ff_apa_corumbatai/data/output/maps/
+sp_ff_apa_corumbatai/data/bruto/*
+sp_ff_apa_corumbatai/data/input/*
+sp_ff_apa_corumbatai/data/output/*
+#sp_ff_apa_corumbatai/data/output/lixo/
+!sp_ff_apa_corumbatai/data/output/zips/
+!sp_ff_apa_corumbatai/data/output/maps/
 
 # IDEs
 .vscode/
