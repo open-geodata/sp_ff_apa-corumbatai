@@ -36,6 +36,7 @@ setup(
 
     # Quando são diversos módulos...
     packages=find_packages('sp_ff_apa_corumbatai', exclude=['test']),
+    #packages=find_packages(),
 
     # Dados
     include_package_data=True,
