@@ -34,7 +34,7 @@ def read_data(select_file):
 
 def limite():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_limite.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -60,7 +60,7 @@ def limite():
 
 def limite_zpa():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_zpa.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -86,7 +86,7 @@ def limite_zpa():
 
 def limite_zph():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_zph.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -112,7 +112,7 @@ def limite_zph():
 
 def limite_zvs():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_zvs.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -138,7 +138,7 @@ def limite_zvs():
 
 def limite_hidro_simples():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_hidro_simples.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -164,7 +164,7 @@ def limite_hidro_simples():
 
 def limite_hidro_dupla():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_hidro_dupla.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -190,7 +190,7 @@ def limite_hidro_dupla():
 
 def limite_hidro_nascente():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_hidro_nascente.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -216,7 +216,7 @@ def limite_hidro_nascente():
 
 def limite_hidro_lakes():
     # Input
-    root = Path(__file__).parent.joinpath('data/output/zips')
+    root = Path(__file__).parent.joinpath('data/output/geo')
     gdf = read_data(root.joinpath('apa_corumbatai_hidro_represa.7z'))
     gdf = gdf.to_crs(epsg=4326)
 
@@ -249,46 +249,46 @@ if __name__ == '__main__':
         sw = gdf.bounds[['miny', 'minx']].min().values.tolist()
         ne = gdf.bounds[['maxy', 'maxx']].max().values.tolist()
         bounds = [sw, ne]
-        
+
         # Zoom
         min_zoom = 10
         max_zoom = 18
 
         # Create Map
         m = folium.Map(
-            #location=list_centroid,
-            #zoom_start=10,
+            # location=list_centroid,
+            # zoom_start=10,
             min_zoom=min_zoom,
             max_zoom=max_zoom,
             max_bounds=True,
-            #zoom_delta=0.1,
+            # zoom_delta=0.1,
             min_lat=bounds[0][0]*(101/100),
             min_lon=bounds[0][1]*(101/100),
             max_lat=bounds[1][0]*(99/100),
             max_lon=bounds[1][1]*(99/100),
             tiles=None,
         )
-        
+
         # Add Base Layers
         m.add_child(lyr.base.google_hybrid(min_zoom, max_zoom))
         m.add_child(lyr.base.google_terrain(min_zoom, max_zoom))
         m.add_child(lyr.base.google_streets(min_zoom, max_zoom))
         m.add_child(lyr.base.google_satellite(min_zoom, max_zoom))
-        
+
         # Plano Diretor
         m.add_child(limite_zpa())
         m.add_child(limite_zph())
         m.add_child(limite_zvs())
-        m.add_child(limite())    
-        #m.add_child(limite_mun())        
-        
+        m.add_child(limite())
+        # m.add_child(limite_mun())
+
         hidro_group = folium.FeatureGroup('Hidrografia', show=False)
         hidro_group.add_child(limite_hidro_simples())
         hidro_group.add_child(limite_hidro_dupla())
         hidro_group.add_child(limite_hidro_lakes())
-        #hidro_group.add_child(limite_hidro_nascente())
-        #hidro_group.add_to(m)
-        
+        # hidro_group.add_child(limite_hidro_nascente())
+        # hidro_group.add_to(m)
+
         # Plugins
         m.fit_bounds(bounds)
         plugins.Fullscreen(
@@ -301,11 +301,11 @@ if __name__ == '__main__':
             collapsed=False
         ).add_to(m)
         return m
-    
-    # ddd    
-    m = get_map(os.path.abspath(os.path.join('src', 'sp_ff_apa_corumbatai', 'data', 'output', 'gpkg', 'apa_corumbatai_limite.gpkg')))
 
-    # Save/Open Map    
+    # ddd
+    root = Path(__file__).parent.joinpath('data/output/gpkg')
+    m = get_map(root / 'apa_corumbatai_limite.gpkg')
+    # Save/Open Map
     map_file = os.path.join(os.path.expanduser('~'), 'Downloads', 'map_example.html')
     m.save(map_file)
     webbrowser.open(map_file)
