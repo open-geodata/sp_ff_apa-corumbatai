@@ -11,7 +11,7 @@ for line in open('requirements.txt', encoding='utf-8'):
         requirements.append(line.rstrip())
 
 
-VERSION = (0, 0, 10)
+VERSION = (0, 0, 11)
 __version__ = '.'.join(map(str, VERSION))
 
 
@@ -20,7 +20,7 @@ setup(
     version=__version__,
     author='Michel Metran',
     author_email='michelmetran@gmail.com',
-    description='Compartilhamento de Dados Espaciais',
+    description='Dados Espaciais da APA Corumbataí',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/open-geodata/sp_ff_apa-corumbatai',
@@ -40,7 +40,7 @@ setup(
 
     # Dados
     include_package_data=True,
-    package_data={'': ['data/output/zips/*.7z']},
+    package_data={'': ['data/output/geo/*.7z']},
 
     # Classificação
     classifiers=[

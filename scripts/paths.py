@@ -19,9 +19,8 @@ project_path = Path(__file__).parents[1]
 # adds_path = scrapy_path / 'adds'
 # adds_path.mkdir(exist_ok=True)
 
-
 # Package Path
-package_path = project_path / 'sp_piracicaba'
+package_path = project_path / 'sp_ff_apa_corumbatai'
 
 data_path = package_path / 'data'
 data_path.mkdir(exist_ok=True)
@@ -53,8 +52,8 @@ output_path_map.mkdir(exist_ok=True)
 output_path_shp = output_path / 'shp'
 output_path_shp.mkdir(exist_ok=True)
 
-output_path_zip = output_path / 'zips'
-output_path_zip.mkdir(exist_ok=True)
+output_path_geo = output_path / 'geo'
+output_path_geo.mkdir(exist_ok=True)
 
 
 if __name__ == '__main__':

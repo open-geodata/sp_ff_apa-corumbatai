@@ -5,15 +5,15 @@ include requirements.txt
 include LICENSE
 
 #
-graft src # Add all files under directories src
+#graft src # Add all files under directories src
 #graft data # Add all files under directories data
 
 # Remove all files under directories
 prune test
-prune src/sp_ff_apa_corumbatai/data/input 
-prune src/sp_ff_apa_corumbatai/data/output/gpgk
-prune src/sp_ff_apa_corumbatai/data/output/maps
-prune src/sp_ff_apa_corumbatai/data/output/lixo
+prune sp_ff_apa_corumbatai/data/input
+prune sp_ff_apa_corumbatai/data/output/gpgk
+prune sp_ff_apa_corumbatai/data/output/maps
+prune sp_ff_apa_corumbatai/data/output/lixo
 
 #recursive-include YourPackage/data/*.csv
 
