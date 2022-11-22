@@ -1,17 +1,17 @@
 """
-
-
+Layers
 """
 
-import os
-import folium
-import webbrowser
-import geopandas as gpd
-from pathlib import Path
-import py7zr
 import importlib.resources
-from open_geodata import geo, lyr
+import os
+import webbrowser
+from pathlib import Path
+
+import folium
+import geopandas as gpd
+import py7zr
 from folium import plugins
+from open_geodata import geo, lyr
 
 
 def list_datasets():
@@ -46,11 +46,9 @@ def limite():
             'fillColor': '#E1E1E1',
             'color': '#E1E1E1',
             'weight': 3,
-            'fillOpacity': 0.0
+            'fillOpacity': 0.0,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -72,11 +70,9 @@ def limite_zpa():
             'fillColor': '#ff8080',
             'color': '#ff8080',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -98,11 +94,9 @@ def limite_zph():
             'fillColor': '#8080ff',
             'color': '#8080ff',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -124,11 +118,9 @@ def limite_zvs():
             'fillColor': '#009933',
             'color': '#009933',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -150,11 +142,9 @@ def limite_hidro_simples():
             'fillColor': '#0099ff',
             'color': '#0099ff',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -176,11 +166,9 @@ def limite_hidro_dupla():
             'fillColor': '#0099ff',
             'color': '#0099ff',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -202,11 +190,9 @@ def limite_hidro_nascente():
             'fillColor': '#0099ff',
             'color': '#0099ff',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -228,11 +214,9 @@ def limite_hidro_lakes():
             'fillColor': '#0099ff',
             'color': '#0099ff',
             'weight': 1,
-            'fillOpacity': 0.5
+            'fillOpacity': 0.5,
         },
-        highlight_function=lambda x: {
-            'weight': 3
-        },
+        highlight_function=lambda x: {'weight': 3},
         embed=False,
         zoom_on_click=False,
         control=True,
@@ -262,10 +246,10 @@ if __name__ == '__main__':
             max_zoom=max_zoom,
             max_bounds=True,
             # zoom_delta=0.1,
-            min_lat=bounds[0][0]*(101/100),
-            min_lon=bounds[0][1]*(101/100),
-            max_lat=bounds[1][0]*(99/100),
-            max_lon=bounds[1][1]*(99/100),
+            min_lat=bounds[0][0] * (101 / 100),
+            min_lon=bounds[0][1] * (101 / 100),
+            max_lat=bounds[1][0] * (99 / 100),
+            max_lon=bounds[1][1] * (99 / 100),
             tiles=None,
         )
 
@@ -296,16 +280,15 @@ if __name__ == '__main__':
             title='Clique para Maximizar',
             title_cancel='Mininizar',
         ).add_to(m)
-        folium.LayerControl(
-            position='topright',
-            collapsed=False
-        ).add_to(m)
+        folium.LayerControl(position='topright', collapsed=False).add_to(m)
         return m
 
     # ddd
     root = Path(__file__).parent.joinpath('data/output/gpkg')
     m = get_map(root / 'apa_corumbatai_limite.gpkg')
     # Save/Open Map
-    map_file = os.path.join(os.path.expanduser('~'), 'Downloads', 'map_example.html')
+    map_file = os.path.join(
+        os.path.expanduser('~'), 'Downloads', 'map_example.html'
+    )
     m.save(map_file)
     webbrowser.open(map_file)
