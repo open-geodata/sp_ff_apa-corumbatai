@@ -5,7 +5,7 @@
 
 <br>
 
-A partir da base vetorial, fiz um mapa online, disponível [aqui](https://open-geodata.github.io/blog/apa-corumbata%C3%AD/), para facilitar o acesso. Os vetores são restritos ao perímetro Corumbataí.
+A partir da base vetorial, fiz um mapa _online_, disponível [aqui](https://open-geodata.github.io/blog/apa-corumbata%C3%AD/), para facilitar o acesso. Os vetores são restritos ao perímetro Corumbataí.
 
 <br>
 
